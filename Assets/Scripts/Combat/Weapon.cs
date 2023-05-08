@@ -12,7 +12,8 @@ public class Weapon : Collidable
    public int weaponType = 0;
    private SpriteRenderer SpriteRenderer;
 
-    //Swing time variables
+    //Swing variables
+    private Animator anim;
     private float cooldown = 0.25f;
     private float lastSwing;
 
@@ -21,6 +22,7 @@ public class Weapon : Collidable
     {
         base.Start();
         SpriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     //Update
@@ -55,6 +57,6 @@ public class Weapon : Collidable
     }
 
     private void Swing(){
-        Debug.Log("Swing");
+        anim.SetTrigger("Swing");
     }
 }
