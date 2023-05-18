@@ -1347,7 +1347,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chest_0
+      name: Chest_2
       rect:
         serializedVersion: 2
         x: 224
@@ -1451,6 +1451,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Chest_0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e43651b7be2a54283c589a00db4b17
+      internalID: 48998138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1471,13 +1492,14 @@ TextureImporter:
       Wall_7: 3628468241054914511
       Floor_2: -1291705123832498677
       Torch_7: 620111541035404702
-      Chest_0: -113462209
-      Crates_1: 2185041290902523119
       Skull_0: 387755419
+      Crates_1: 2185041290902523119
+      Chest_0: 48998138
       Wall_1: 7870480730772048316
       Wall_0: -6721728136321296765
       Floor_9: 2748396297729853354
       Stairs_2: -7503008079389545076
+      Chest_2: -113462209
       Torch_6: -2285114424382770006
       Crates_2: 2592197434785513267
       Player_1: -4869357254534750094
