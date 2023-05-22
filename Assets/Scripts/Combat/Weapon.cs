@@ -55,8 +55,10 @@ public class Weapon : Collidable
             coll.SendMessage("RecieveDamage", dmg);
         }
     }
+   GameObject Menu = GameObject.Find("Menu");
 
     private void Swing(){
+        if(Menu.transform.position.y < 500)
         anim.SetTrigger("Swing");
     }
 }
