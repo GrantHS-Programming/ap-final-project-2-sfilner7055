@@ -370,7 +370,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 30279501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e52a8fe7f3a4447a88d7f2734f3717, type: 3}
+  m_Script: {fileID: 11500000, guid: 680975e75340a674781fbb2202045d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &104231174
@@ -24210,8 +24210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea55faa35f15d3147a84ac9295e6a03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoint: 0
-  maxHitpoint: 0
+  hitpoint: 10
+  maxHitpoint: 10
   pushRecoverySpeed: 0.2
 --- !u!212 &300651390
 SpriteRenderer:
@@ -24642,7 +24642,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 12/12
+  m_text: 10/10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eb0cc899f37331e4cabe0cbe061a5764, type: 2}
   m_sharedMaterial: {fileID: 2481679745193841887, guid: eb0cc899f37331e4cabe0cbe061a5764,

@@ -12,10 +12,12 @@ public class Weapon : Collidable
    public int weaponType = 0;
    private SpriteRenderer SpriteRenderer;
 
+
     //Swing variables
     private Animator anim;
     private float cooldown = 0.25f;
     private float lastSwing;
+    
 
     //Starting
     protected override void Start()
@@ -23,6 +25,7 @@ public class Weapon : Collidable
         base.Start();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        
     }
 
     //Update
@@ -55,10 +58,9 @@ public class Weapon : Collidable
             coll.SendMessage("RecieveDamage", dmg);
         }
     }
-   GameObject Menu = GameObject.Find("Menu");
+
 
     private void Swing(){
-        if(Menu.transform.position.y < 500)
         anim.SetTrigger("Swing");
     }
 }
