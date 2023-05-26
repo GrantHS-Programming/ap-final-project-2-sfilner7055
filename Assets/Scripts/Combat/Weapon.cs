@@ -17,12 +17,18 @@ public class Weapon : Collidable
     private Animator anim;
     private float cooldown = 0.25f;
     private float lastSwing;
+
+    //Weapon arraylist stuff
+    ArrayList weaponList = new ArrayList();
     
 
     //Starting
     protected override void Start()
     {
         base.Start();
+
+        //ArrayList.Add();
+
         SpriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         
