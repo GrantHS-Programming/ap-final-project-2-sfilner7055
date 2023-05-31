@@ -9,7 +9,7 @@ public class CharacterMenu : MonoBehaviour
     public Text levelText, hpText, coinText, upgradeCostText, xpText, soulText;
     
     //Logic
-    private int currentWeaponSelection = 0;
+    private int currentWeapon = 0;
     private int oldWeapon = 0;
     public Image characterCollectionSprite;
     public Image weaponSprite;
@@ -18,26 +18,27 @@ public class CharacterMenu : MonoBehaviour
     //Weapon Selection
     public void onWeaponButtonClick(bool right, bool mid){
         if(right){
-            oldWeapon = currentWeaponSelection;
-            currentWeaponSelection = 2;
+            oldWeapon = currentWeapon;
+            currentWeapon = 2;
 
             OnSelectionChanged();
         }
         else if(mid){
-            oldWeapon = currentWeaponSelection;
-            currentWeaponSelection = 1;
+            oldWeapon = currentWeapon;
+            currentWeapon = 1;
 
             OnSelectionChanged();
             }
         else{
-            oldWeapon = currentWeaponSelection;
-            currentWeaponSelection = 0;
+            oldWeapon = currentWeapon;
+            currentWeapon = 0;
 
             OnSelectionChanged();
         }
 
     }
     private void OnSelectionChanged(){
+
         //GameObject.setActive(true) for the new one, false for old one
     }
 }

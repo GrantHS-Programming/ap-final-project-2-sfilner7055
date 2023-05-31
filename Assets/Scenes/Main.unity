@@ -370,9 +370,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 30279501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0058dea1da050f49a43a9d9640a2bd6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3bdaa3555cd53b946b07c672f824cc76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelText: {fileID: 0}
+  hpText: {fileID: 0}
+  coinText: {fileID: 0}
+  upgradeCostText: {fileID: 0}
+  xpText: {fileID: 0}
+  soulText: {fileID: 0}
+  characterCollectionSprite: {fileID: 0}
+  weaponSprite: {fileID: 0}
+  xpBar: {fileID: 0}
 --- !u!1 &104231174
 GameObject:
   m_ObjectHideFlags: 0
@@ -2633,7 +2642,7 @@ GameObject:
   - component: {fileID: 132332029}
   - component: {fileID: 132332028}
   m_Layer: 0
-  m_Name: lightning_bulb_gun
+  m_Name: Lightning_Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2700,9 +2709,11 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  weaponName: Lightning_Gun
   damagePoint: 1
   pushForce: 4
   weaponType: 0
+  weaponList: []
 --- !u!61 &132332030
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23869,7 +23880,7 @@ GameObject:
   - component: {fileID: 219941673}
   - component: {fileID: 219941672}
   m_Layer: 0
-  m_Name: sword_green
+  m_Name: Sword_Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23889,7 +23900,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 300651391}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 86.528}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 47}
 --- !u!95 &219941672
 Animator:
   serializedVersion: 4
@@ -23962,9 +23973,11 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  weaponName: Sword_Green
   damagePoint: 1
   pushForce: 4
   weaponType: 0
+  weaponList: []
 --- !u!212 &219941675
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25068,12 +25081,12 @@ GameObject:
   - component: {fileID: 397405874}
   - component: {fileID: 397405875}
   m_Layer: 0
-  m_Name: sword_red
+  m_Name: Sword_Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &397405871
 Transform:
   m_ObjectHideFlags: 0
@@ -25193,9 +25206,11 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  weaponName: Sword_Red
   damagePoint: 1
   pushForce: 4
   weaponType: 0
+  weaponList: []
 --- !u!95 &397405875
 Animator:
   serializedVersion: 4

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Weapon : Collidable
 {
@@ -18,8 +19,6 @@ public class Weapon : Collidable
     private float cooldown = 0.25f;
     private float lastSwing;
 
-    //Weapon arraylist stuff
-    ArrayList weaponList = new ArrayList();
     
 
     //Starting
@@ -27,7 +26,6 @@ public class Weapon : Collidable
     {
         base.Start();
 
-        //ArrayList.Add();
 
         SpriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
@@ -37,6 +35,7 @@ public class Weapon : Collidable
     //Update
     protected override void Update()
     {
+
         base.Update();
         //If the time since last mouse click is more than the cooldown, you can swing again.
         if(Input.GetMouseButtonDown(0)){
@@ -45,6 +44,7 @@ public class Weapon : Collidable
                 Swing();
             }
         }
+        
         
     }
 
