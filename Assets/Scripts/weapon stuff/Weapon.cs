@@ -6,6 +6,7 @@ using System;
 public class Weapon : Collidable
 {
    //Damage struct
+
    public int damagePoint = 1;
    public float pushForce = 4.0f;
 
