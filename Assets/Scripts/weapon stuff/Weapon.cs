@@ -26,7 +26,8 @@ public class Weapon : Collidable
     protected override void Start()
     {
         base.Start();
-
+        
+        this.transform.localScale = new Vector3(0, 0, 0);
 
         SpriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();

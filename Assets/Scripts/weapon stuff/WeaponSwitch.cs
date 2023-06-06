@@ -11,27 +11,38 @@ public class WeaponSwitch : MonoBehaviour
     int currentWeapon = 0;
     Animator anim;
 
+    public GameObject weapon1;
+    public GameObject weapon2;
+    public GameObject weapon3;
+
 
     void Start()
     {
+
+
         //hiding weapons
-        Hide("Sword_Red");
-        Hide("Sword_Green");
-        Hide("Lightning_Gun");
+
+        weapon1 = GameObject.Find("Sword_Red");
+        weapon2 = GameObject.Find("Sword_Green");
+        weapon3 = GameObject.Find("Axe_Grey");
+
+        Hide(weapon1.name);
+        Hide(weapon2.name);
+        Hide(weapon3.name);
 
         //adding weapons to weaponlist
-        if(GameObject.Find("Sword_Red") != null){
+        if(GameObject.Find(weapon1.name) != null){
             Debug.Log("not null");
         }
-        else if(GameObject.Find("Sword_Red") == null){
+        else if(GameObject.Find(weapon1.name) == null){
             Debug.Log("null");
         }
         else{
             Debug.Log("Other");
         }
-        weaponList.Add(GameObject.Find("Sword_Red"));
-        weaponList.Add(GameObject.Find("Sword_Green"));
-        weaponList.Add(GameObject.Find("Lightning_Gun"));
+        weaponList.Add(weapon1);
+        weaponList.Add(weapon2);
+        weaponList.Add(weapon3);
     }
 
     // Update is called once per frame
