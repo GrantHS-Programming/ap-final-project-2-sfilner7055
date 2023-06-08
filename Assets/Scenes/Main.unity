@@ -2641,6 +2641,7 @@ GameObject:
   - component: {fileID: 132332030}
   - component: {fileID: 132332029}
   - component: {fileID: 132332028}
+  - component: {fileID: 132332032}
   m_Layer: 0
   m_Name: Lightning_Gun
   m_TagString: Untagged
@@ -2656,12 +2657,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132332026}
   m_LocalRotation: {x: -0, y: -0, z: 0.3987491, w: 0.91706014}
-  m_LocalPosition: {x: -0.004, y: 0.041999996, z: 0}
+  m_LocalPosition: {x: -0.00040000025, y: -0.4571, z: 0}
   m_LocalScale: {x: 0.70000005, y: 0.70000005, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 691128994}
-  m_RootOrder: 2
+  m_Father: {fileID: 254766904}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 47}
 --- !u!95 &132332028
 Animator:
@@ -2690,7 +2691,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132332026}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ab2cce1bd107144495cc110d7f637a2, type: 3}
   m_Name: 
@@ -2790,6 +2791,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &132332032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132332026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415ca02340b64b94993d1bf1e631df92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &146025387
 GameObject:
   m_ObjectHideFlags: 0
@@ -23877,6 +23890,7 @@ GameObject:
   - component: {fileID: 219941674}
   - component: {fileID: 219941673}
   - component: {fileID: 219941672}
+  - component: {fileID: 219941676}
   m_Layer: 0
   m_Name: Sword_Green
   m_TagString: Untagged
@@ -24026,6 +24040,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &219941676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219941670}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415ca02340b64b94993d1bf1e631df92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &225459968
 GameObject:
   m_ObjectHideFlags: 0
@@ -24198,7 +24224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 254766904}
   m_Layer: 0
-  m_Name: unequipped weapons
+  m_Name: floorWeapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24215,7 +24241,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 132332027}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24361,9 +24388,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponList: []
+  currentWeapon: 0
   weapon1: {fileID: 0}
   weapon2: {fileID: 0}
   weapon3: {fileID: 0}
+  dropKey: t
 --- !u!1 &302336274
 GameObject:
   m_ObjectHideFlags: 0
@@ -25143,6 +25172,7 @@ GameObject:
   - component: {fileID: 397405872}
   - component: {fileID: 397405874}
   - component: {fileID: 397405875}
+  - component: {fileID: 397405876}
   m_Layer: 0
   m_Name: Sword_Red
   m_TagString: Untagged
@@ -25163,7 +25193,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 691128994}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 47}
 --- !u!61 &397405872
 BoxCollider2D:
@@ -25292,6 +25322,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &397405876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397405870}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415ca02340b64b94993d1bf1e631df92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &416933565
 GameObject:
   m_ObjectHideFlags: 0
@@ -26329,7 +26371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 691128994}
   m_Layer: 0
-  m_Name: Equipped Weapons
+  m_Name: heldWeapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26349,8 +26391,8 @@ Transform:
   m_Children:
   - {fileID: 862365697}
   - {fileID: 219941671}
-  - {fileID: 132332027}
   - {fileID: 397405871}
+  - {fileID: 1780147955}
   m_Father: {fileID: 300651391}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27246,6 +27288,7 @@ GameObject:
   - component: {fileID: 862365700}
   - component: {fileID: 862365699}
   - component: {fileID: 862365698}
+  - component: {fileID: 862365702}
   m_Layer: 0
   m_Name: Axe_Grey
   m_TagString: Untagged
@@ -27395,6 +27438,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &862365702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862365696}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415ca02340b64b94993d1bf1e631df92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &912769853
 GameObject:
   m_ObjectHideFlags: 0
@@ -29887,6 +29942,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1780147954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1780147955}
+  m_Layer: 0
+  m_Name: emptySlot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1780147955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780147954}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 691128994}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1782675142
 GameObject:
   m_ObjectHideFlags: 0

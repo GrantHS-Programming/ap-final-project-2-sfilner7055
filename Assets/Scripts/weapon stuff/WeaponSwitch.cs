@@ -8,12 +8,15 @@ public class WeaponSwitch : MonoBehaviour
     
     //Weapon arraylist stuff
     public List<GameObject> weaponList = new List<GameObject>();
-    int currentWeapon = 0;
+    public int currentWeapon = 0;
     Animator anim;
 
     public GameObject weapon1;
     public GameObject weapon2;
     public GameObject weapon3;
+
+    //key presses
+    public String dropKey = "t";
 
 
     void Start()
@@ -74,6 +77,14 @@ public class WeaponSwitch : MonoBehaviour
                 Show(weaponList[2].name.ToString());
                 //weaponList[2].SetActive(true);
                 currentWeapon = 2; 
+        }
+
+        if(Input.GetKeyDown(dropKey)){
+            weaponList[currentWeapon].GetComponent<Weapon>().enabled = false;
+            weaponList[currentWeapon].GetComponent<IdleWeapon>().enabled = true;
+            weaponList[currentWeapon] = Instantiate(GameObject.Find("emptySlot"));
+            
+
         }
 
 
