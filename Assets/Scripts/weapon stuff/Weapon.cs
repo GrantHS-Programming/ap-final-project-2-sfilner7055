@@ -26,6 +26,7 @@ public class Weapon : Collidable
     protected override void Start()
     {
         base.Start();
+        this.transform.position = new Vector3(-0.004f, 0.042f, 0.0f);
         
         this.transform.localScale = new Vector3(0, 0, 0);
 

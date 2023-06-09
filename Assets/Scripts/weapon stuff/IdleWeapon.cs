@@ -5,7 +5,7 @@ using UnityEngine;
 public class IdleWeapon : MonoBehaviour
 {
 
-    Transform tempTransform;
+    Vector3 tempTransform;
 
     GameObject floor;
     // Start is called before the first frame update
@@ -13,9 +13,16 @@ public class IdleWeapon : MonoBehaviour
     {
         floor = GameObject.Find("floorWeapons");
 
-        tempTransform = this.transform;
-        this.transform.SetParent(GameObject.Find("floorWeapons").transform, false);
-        //this.transform = tempTransform;
+        tempTransform = this.transform.position;
+        Debug.Log(tempTransform);
+        if(tempTransform == this.transform.position){
+            Debug.Log("first oen worked");
+        }
+        this.transform.SetParent(GameObject.Find("floorWeapons").transform);
+        this.transform.position = tempTransform;
+        if(this.transform.position == tempTransform){
+            Debug.Log("temptransform");
+        }
     }
 
     // Update is called once per frame
